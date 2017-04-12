@@ -1,0 +1,5 @@
+class Callback {
+void methodToCallBack ();
+
+};
+

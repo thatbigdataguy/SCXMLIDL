@@ -1,0 +1,3 @@
+interface Monitor {
+  void addListener(CallBack callback);
+};
