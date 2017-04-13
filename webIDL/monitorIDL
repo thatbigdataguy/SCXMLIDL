@@ -1,3 +1,6 @@
 interface Monitor {
-  void addListener(CallBack callback);
+  void	onEventFired();
+  void  onBeforeExit();
+  void	onAfterEnter();
+  void  onTransition();
 };
