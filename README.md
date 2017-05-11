@@ -4,3 +4,4 @@
   * [The Basics](#the-basics)
 ## Usage
 ### The Basics
+## API
