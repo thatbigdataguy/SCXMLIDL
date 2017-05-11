@@ -1,4 +1,4 @@
-# About SCXML IDL
+# Overview
 # Table of Contents
 * [Usage](#usage)
   * [The Basics](#the-basics)
