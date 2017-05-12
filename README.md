@@ -14,9 +14,27 @@ Currently  SCXMLIDL supports [Commons SCXML][2], [uSCXML][3] and [LXSC][4]
 # Table of Contents
 * [Usage](#usage)
   * [The Basics](#the-basics)
+* [Examples](#Examples)
 ## Usage
 ### The Basics
 ## API
+### Constructor
+* var interpreter = new Interpreter()
+### Methods of SCXML interpreter instances
+* interpreter.setStateMachine ()
+* interpreter.addMonitor()
+* interpreter.triggerEvent(Event e)
+* interpreter.triggerEvents()
+* interpreter.allStateIds()
+* interpreter.isActiveState(stateId)
+* interpreter.getInterpreterState()
+### Callbacks 
+* interpreter.onExit()
+* interpreter.onTransition()
+* interpreter.onEntry()
+
+## Examples
+
 
 
 [1]: http://www.w3.org/TR/scxml/
