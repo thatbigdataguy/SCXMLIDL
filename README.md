@@ -14,7 +14,12 @@ Currently  SCXMLIDL supports [Commons SCXML][2], [uSCXML][3] and [LXSC][4]
 # Table of Contents
 * [Usage](#usage)
   * [The Basics](#the-basics)
-* [Examples](#Examples)
+* [Examples](#examples)
+  * [JavaSample Project](#the-basics)
+  * [C++Sample Project](#the-basics)
+  * [LuaSample Project](#the-basics)
+
+  
 ## Usage
 ### The Basics
 ## API
