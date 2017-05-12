@@ -23,6 +23,13 @@ Currently  SCXMLIDL supports [Commons SCXML][2], [uSCXML][3] and [LXSC][4]
   
 ## Usage
 ### The Basics
+## Input
+### webIDL
+## Output
+### Generated Files
+#### Java
+#### C++
+#### Lua
 ## API
 ### Constructor
 * var interpreter = new Interpreter()
