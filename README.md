@@ -18,6 +18,7 @@ Currently  SCXMLIDL supports [Commons SCXML][2], [uSCXML][3] and [LXSC][4]
   * [JavaSample Project](#the-basics)
   * [C++Sample Project](#the-basics)
   * [LuaSample Project](#the-basics)
+* [Future Work (TODO)](#futurework)
 
   
 ## Usage
@@ -39,6 +40,11 @@ Currently  SCXMLIDL supports [Commons SCXML][2], [uSCXML][3] and [LXSC][4]
 * interpreter.onEntry()
 
 ## Examples
+
+## Future Work
+
+* Support for Data Model 
+* Support for Custom Executable Content
 
 
 
