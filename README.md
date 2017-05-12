@@ -33,7 +33,7 @@ Currently  SCXMLIDL supports [Commons SCXML][2], [uSCXML][3] and [LXSC][4]
 * interpreter.allStateIds()
 * interpreter.isActiveState(stateId)
 * interpreter.getInterpreterState()
-### Callbacks 
+### Callbacks as the Machine Changes
 * interpreter.onExit()
 * interpreter.onTransition()
 * interpreter.onEntry()
