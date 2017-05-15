@@ -7,9 +7,8 @@ Currently  SCXMLIDL supports [Commons SCXML][2] and [LXSC][4]
 * [Usage](#usage)
   * [The Basics](#the-basics)
 * [Examples](#examples)
-  * [JavaSample Project](#the-basics)
-  * [C++Sample Project](#the-basics)
-  * [LuaSample Project](#the-basics)
+  * [JavaSample Project](#https://github.com/thatbigdataguy/ScxmlIDLExampleJava)
+  * [LuaSample Project](#https://github.com/thatbigdataguy/ScxmlIDLExample)
 * [Future Work (TODO)](#futurework)
 
   
