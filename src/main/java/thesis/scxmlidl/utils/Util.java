@@ -59,4 +59,30 @@ public class Util {
 		}
 		return webIDL;
 	}
+	
+	public String getLuaBoiler(){
+		StringBuilder temp = new StringBuilder();
+		temp.append("--Meta class\n");
+		temp.append("\nInterpreter = {name=0}");
+		temp.append("\nlocal currentstate");
+		temp.append("\nlocal INITIALIZED, STEPPED = 0, 1");
+		temp.append("\n-- Base class method new\n\n");
+		temp.append("\nfunction Interpreter:new (o,nam)");
+		temp.append("\n o = o or {}");
+		temp.append("\n setmetatable(o,self)");
+		temp.append("\n self.__index = self");
+		temp.append("\n nam = nam or 0");
+		temp.append("\n local scxml   = io.open(nam):read('*all')");
+		temp.append("\n machine = LXSC:parse(scxml)");
+		temp.append("\n self.name = machine");
+		temp.append("\n currentstate=INITIALIZED");
+		temp.append("\n return o");
+		temp.append("\n end\n");
+		
+		
+		
+		
+		return temp.toString();
+		
+	}
 }

@@ -14,7 +14,7 @@ public class IdlToJava extends WebIDLBaseListener {
 		Util u = new Util();
 		u.createFile("java/"+Interfacename + ".java");
 		// System.out.print(ctx.getChild(0)+" "+ctx.getChild(1)+" ");
-		System.out.print("Interface " + ctx.getChild(1) + " ");
+		System.out.print("interface " + ctx.getChild(1) + " ");
 
 	}
 
@@ -76,12 +76,16 @@ public class IdlToJava extends WebIDLBaseListener {
 
 	@Override
 	public void enterReturnType(WebIDLParser.ReturnTypeContext ctx) {
-		System.out.printf(ctx.getText() + " ");
+	
 	}
 
 	@Override
 	public void exitReturnType(WebIDLParser.ReturnTypeContext ctx) {
-	}
+		if(ctx.getText().equalsIgnoreCase("DOMString"))
+		System.out.printf("String" + " ");
+		else
+			System.out.printf(ctx.getText() + " ");
+		}
 
 	@Override
 	public void enterOptionalIdentifier(WebIDLParser.OptionalIdentifierContext ctx) {
@@ -112,7 +116,11 @@ public class IdlToJava extends WebIDLBaseListener {
 
 	@Override
 	public void enterNonAnyType(WebIDLParser.NonAnyTypeContext ctx) {
-		System.out.printf(" " + ctx.getText() + " ");
+		if (ctx.getText().equalsIgnoreCase("DOMString"))
+		System.out.printf("");
+		else
+			System.out.printf("" + ctx.getText() + " ");
+			
 	}
 
 	@Override

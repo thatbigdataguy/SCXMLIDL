@@ -18,16 +18,13 @@ public class IdlToLua extends WebIDLBaseListener {
 		Interfacename = ctx.getChild(1).toString();
 		Util u = new Util();
 		u.createFile("lua/"+Interfacename + ".lua");
-		System.out.print("local " + ctx.getChild(1) + " " + "=" + "{}");
+		System.out.print(u.getLuaBoiler());
+		
 	}
 
 	@Override
 	public void exitInterface_(WebIDLParser.Interface_Context ctx) {
 
-		for (int i = 0; i < methods.size(); i++) {
-			System.out.println(Interfacename + "." + methods.get(i) + " = " + " " + methods.get(i));
-		}
-		System.out.println("\nreturn " + ctx.getChild(1));
 	}
 
 	@Override
@@ -82,7 +79,7 @@ public class IdlToLua extends WebIDLBaseListener {
 
 	@Override
 	public void enterReturnType(WebIDLParser.ReturnTypeContext ctx) {
-		System.out.printf("local function" + " ");
+		System.out.printf("function" + " ");
 	}
 
 	@Override
@@ -91,8 +88,7 @@ public class IdlToLua extends WebIDLBaseListener {
 
 	@Override
 	public void enterOptionalIdentifier(WebIDLParser.OptionalIdentifierContext ctx) {
-		System.out.printf(ctx.getText() + " ");
-		methods.add(ctx.getText().toString());
+		System.out.printf("Interpreter:"+ctx.getText() + "");
 
 	}
 
@@ -119,7 +115,7 @@ public class IdlToLua extends WebIDLBaseListener {
 
 	@Override
 	public void enterNonAnyType(WebIDLParser.NonAnyTypeContext ctx) {
-		System.out.printf(" " + ctx.getText() + " ");
+		//System.out.printf(" " + ctx.getText() + " ");
 	}
 
 	@Override

@@ -77,13 +77,13 @@ public class Test {
 		u.createFolder("Generated Source/java");
 		walker.walk(new IdlToJava(), tree);
 //		System.out.println("Now C Plus Plus");
-		u.createFolder("Generated Source/c++");
-		walker.walk(new IdlToCplusplus(), tree);
-		System.out.println(); // print a \n after translation
-//		System.out.println("Now Lua");
+//		u.createFolder("Generated Source/c++");
+//		walker.walk(new IdlToCplusplus(), tree);
+//		System.out.println(); // print a \n after translation
+		System.out.println("Now Lua");
 		u.createFolder("Generated Source/lua");
 		walker.walk(new IdlToLua(), tree);
-//		System.out.println(); // print a \n after translation
+		System.out.println(); // print a \n after translation
 
 	}
 	
